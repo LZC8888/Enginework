@@ -6,6 +6,13 @@ using System.Threading;
 
 public class playerControl : MonoBehaviour
 {
+   public static playerControl Instance
+    {
+        get
+        {
+            return s_Instance;
+        }
+    }
     // Start is called before the first frame update
     public float speed=10.0f;//定义移动速度
     public float Rotatespeed=6.28f;//旋转速度
@@ -13,18 +20,21 @@ public class playerControl : MonoBehaviour
     const float k_Acceleration = 20.0f;//加速度
     const float k_Deceleration = 35.0f;//减速度
     public float jumpforce = 50f; //弹力
-    public float y_falling = -2.0f;
-    public float y_return = -100.0f;
+    public float y_falling = -2.0f;//是否跌落的值
+    public float y_return = -100.0f;//是否重开的值
+    public float m_MaxRotationSpeed = 1200;
+    public float m_MinRotationSpeed = 800;
 
+    private static playerControl s_Instance;
     private PlayerInput m_playerInput;
     private CharacterController m_chController;
-    private Camera m_MainCamera;
- //   private CameraControl m_CameraController;
+    private CameraControl m_CameraController;
     private Animator m_Animator;
  
     private float m_DesiredForwardSpeed;
     private float m_ForwardSpeed=0.0f;
- //   private Quaternion m_TargetRotation;
+    private float m_VerticalSpeed = 0;
+    private Quaternion m_TargetRotation;
     private Vector3 moveDirection;
     private bool jump = false;
     private bool falling = false;
@@ -36,46 +46,54 @@ public class playerControl : MonoBehaviour
     private void FixedUpdate()
     {
         ComputeMovement();
-     //   ComputeRotation();
-      /*  if (m_playerInput.IsMoveInput)
+     //   ComputeVerticalMovement();
+        ComputeRotation();
+        if (m_playerInput.IsMoveInput)
         {
+            float rotationSpeed = 
+                Mathf.Lerp(m_MaxRotationSpeed, m_MinRotationSpeed, m_ForwardSpeed / m_DesiredForwardSpeed);
+            m_TargetRotation = 
+                Quaternion.RotateTowards(transform.rotation, m_TargetRotation, rotationSpeed * Time.fixedDeltaTime);
             transform.rotation = m_TargetRotation;
-        }*/
+        }
     }
     
     private void Awake()
     {
        
         m_chController = GetComponent<CharacterController>();
-        m_MainCamera = Camera.main;
-      //  m_CameraController = GetComponent<CameraControl>();
+       // m_MainCamera = Camera.main;
+        m_CameraController = GetComponent<CameraControl>();
         m_playerInput = GetComponent<PlayerInput>();
         m_Animator = GetComponent<Animator>();
+        s_Instance = this;
     }
+    private void OnAnimatorMove()
+    {
+        //m_chController.Move(m_Animator.deltaPosition);
+        Vector3 movement = m_Animator.deltaPosition;
+        movement += m_VerticalSpeed * Vector3.up * Time.fixedDeltaTime;
+        m_chController.Move(movement);
+    }
+  /*  void ComputeVerticalMovement()
+    {
+        m_VerticalSpeed = -gravity;
+    }*/
     void ComputeMovement()
     {
-        Vector3 moveInput = m_playerInput.MoveInput;
-       // Vector3 moveInput = m_playerInput.MoveInput.normalized;
+      //  Vector3 moveInput = m_playerInput.MoveInput;
+        Vector3 moveInput = m_playerInput.MoveInput.normalized;
         m_DesiredForwardSpeed = moveInput.magnitude * speed;
         float acceleration = m_playerInput.IsMoveInput ? k_Acceleration : k_Deceleration;
         m_ForwardSpeed = 
             Mathf.MoveTowards(m_ForwardSpeed, m_DesiredForwardSpeed, Time.fixedDeltaTime*acceleration);
-       Quaternion camRotation = m_MainCamera.transform.rotation;
-        Vector3 targetDirection = camRotation * moveInput;
-        targetDirection.Normalize();
-        targetDirection.y = 0;
-        m_chController.Move(targetDirection * speed * Time.fixedDeltaTime);
-       //   m_chController.transform.rotation = Quaternion.Euler(0, camRotation.eulerAngles.y, 0);
-        Quaternion dir = Quaternion.LookRotation(moveInput);
-        this.transform.rotation =
-            Quaternion.Lerp(this.transform.rotation, dir, Time.deltaTime * Rotatespeed);
-        m_Animator.SetFloat(m_HashForwardSpeed, moveInput.magnitude);
+
+        m_Animator.SetFloat(m_HashForwardSpeed, m_ForwardSpeed);
         
         //跳跃检测
         if (jump)
         {
-            moveDirection = m_playerInput.MoveInput;
-            moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection = transform.TransformDirection(moveInput);
             moveDirection *= speed;
             moveDirection.y = jumpforce;
             m_Animator.SetTrigger("Jump");
@@ -102,15 +120,25 @@ public class playerControl : MonoBehaviour
             landing = false;
         }
 }
- /*   void ComputeRotation()
+    void ComputeRotation()
     {
         Vector3 moveInput = m_playerInput.MoveInput.normalized;
         Vector3 cameraDirection = Quaternion.Euler(0,
-            m_CameraController.freeLookCamera.m_XAxis.value,0)*Vector3.forward;
-        Quaternion movementRotation = Quaternion.FromToRotation(Vector3.forward, moveInput);
-        Quaternion targetRotation = Quaternion.LookRotation(movementRotation * cameraDirection);
+            m_CameraController.freeLookcamera.m_XAxis.Value,0)*Vector3.forward;
+        Quaternion targetRotation;
+        if(Mathf.Approximately(Vector3.Dot(moveInput,Vector3.forward),-1.0f))
+        {
+            targetRotation = Quaternion.LookRotation(-cameraDirection);
+        }
+        else
+        {
+            Quaternion movementRotation = Quaternion.FromToRotation(Vector3.forward, moveInput);
+            targetRotation = Quaternion.LookRotation(movementRotation * cameraDirection);
+        }
+        //Quaternion movementRotation = Quaternion.FromToRotation(Vector3.forward, moveInput);
+        //Quaternion targetRotation = Quaternion.LookRotation(movementRotation * cameraDirection);
         m_TargetRotation = targetRotation;
-    }*/
+    }
     bool IsGrounded()
     {
         return Physics.Raycast(transform.position, Vector3.down, 0.5f);
@@ -122,12 +150,7 @@ public class playerControl : MonoBehaviour
             return true;
         return false;
     }
-  /*  bool IsReturn()
-    {
-        if (transform.position.y < y_return)
-            return true;
-        return false;
-    }*/
+  
     // Update is called once per frame
     void Update()
     {
@@ -135,16 +158,12 @@ public class playerControl : MonoBehaviour
         {
             jump = true;
         }
-        if(IsFalling())
+        if (IsFalling())
         {
            
             falling = true;
             Invoke("ComputeMovement", 3);
         }
-       /* if(IsReturn())
-        {
-            landing = true;
-        }*/
     }
     
 }

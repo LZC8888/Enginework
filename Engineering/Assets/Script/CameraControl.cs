@@ -6,8 +6,8 @@ using Cinemachine;
 public class CameraControl : MonoBehaviour
 {
     // Start is called before the first frame update
-    [SerializeField]
-    CinemachineFreeLook freeLookcamera;
+    
+   public CinemachineFreeLook freeLookcamera;
     void Start()
     {
         

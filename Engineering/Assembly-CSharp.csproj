@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Script\Heroine.cs" />
+    <Compile Include="Assets\Script\BanditBehaviour.cs" />
     <Compile Include="Assets\Cartoon Heroes\Scripts\SetCharacter\SetCharacter.cs" />
     <Compile Include="Assets\Script\PlayerInput.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
