@@ -41,7 +41,7 @@ public class playerControl : MonoBehaviour
     private bool landing = false;
 
     private readonly int m_HashForwardSpeed = Animator.StringToHash("speed");
-
+    private readonly int m_HashMeleeAttack = Animator.StringToHash("MeleeAttack");
 
     private void FixedUpdate()
     {
@@ -55,6 +55,11 @@ public class playerControl : MonoBehaviour
             m_TargetRotation = 
                 Quaternion.RotateTowards(transform.rotation, m_TargetRotation, rotationSpeed * Time.fixedDeltaTime);
             transform.rotation = m_TargetRotation;
+        }
+        m_Animator.ResetTrigger(m_HashMeleeAttack);
+        if(m_playerInput.bIsAttack)
+        {
+            m_Animator.SetTrigger(m_HashMeleeAttack);
         }
     }
     

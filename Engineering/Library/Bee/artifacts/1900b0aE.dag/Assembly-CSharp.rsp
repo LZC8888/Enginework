@@ -344,13 +344,16 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/BanditSMBAttack.cs"
 "Assets/Cartoon Heroes/Scripts/SetCharacter/SetCharacter.cs"
 "Assets/Script/BanditBehaviour.cs"
 "Assets/Script/CameraControl.cs"
+"Assets/Script/EnemyController.cs"
 "Assets/Script/Follow_camera.cs"
 "Assets/Script/Heroine.cs"
 "Assets/Script/playerControl.cs"
 "Assets/Script/PlayerInput.cs"
+"Assets/Script/PlayerScanner.cs"
 -langversion:9.0
 
 /deterministic
