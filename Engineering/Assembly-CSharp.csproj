@@ -64,8 +64,14 @@
     <Compile Include="Assets\Script\PlayerInput.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
     <Compile Include="Assets\Script\playerControl.cs" />
-    <Compile Include="Assets\Script\Follow_camera.cs" />
     <Compile Include="Assets\BanditSMBAttack.cs" />
+    <Compile Include="Assets\Script\Follow_camera.cs" />
+    <Compile Include="Assets\Script\Character.cs" />
+    <Compile Include="Assets\Script\TransformConstrain.cs" />
+    <Compile Include="Assets\Script\CapsuleCaster.cs" />
+    <Compile Include="Assets\Script\MeleeWeapon.cs" />
+    <Compile Include="Assets\Script\HitTag.cs" />
+    <Compile Include="Assets\playerSMBAttack.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

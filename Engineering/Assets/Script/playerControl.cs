@@ -30,7 +30,7 @@ public class playerControl : MonoBehaviour
     private CharacterController m_chController;
     private CameraControl m_CameraController;
     private Animator m_Animator;
- 
+    
     private float m_DesiredForwardSpeed;
     private float m_ForwardSpeed=0.0f;
     private float m_VerticalSpeed = 0;
@@ -39,9 +39,8 @@ public class playerControl : MonoBehaviour
     private bool jump = false;
     private bool falling = false;
     private bool landing = false;
-
     private readonly int m_HashForwardSpeed = Animator.StringToHash("speed");
-    private readonly int m_HashMeleeAttack = Animator.StringToHash("MeleeAttack");
+    private readonly int m_Attack = Animator.StringToHash("Attack");
 
     private void FixedUpdate()
     {
@@ -56,13 +55,17 @@ public class playerControl : MonoBehaviour
                 Quaternion.RotateTowards(transform.rotation, m_TargetRotation, rotationSpeed * Time.fixedDeltaTime);
             transform.rotation = m_TargetRotation;
         }
-        m_Animator.ResetTrigger(m_HashMeleeAttack);
-        if(m_playerInput.bIsAttack)
+       // m_Animator.ResetTrigger(m_Attack);
+        
+        
+        if (m_playerInput.bIsAttack)
         {
-            m_Animator.SetTrigger(m_HashMeleeAttack);
+            m_Animator.SetTrigger(m_Attack);
+           
         }
+     
     }
-    
+   
     private void Awake()
     {
        
@@ -71,6 +74,7 @@ public class playerControl : MonoBehaviour
         m_CameraController = GetComponent<CameraControl>();
         m_playerInput = GetComponent<PlayerInput>();
         m_Animator = GetComponent<Animator>();
+       
         s_Instance = this;
     }
     private void OnAnimatorMove()
