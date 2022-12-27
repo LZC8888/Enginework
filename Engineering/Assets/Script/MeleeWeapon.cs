@@ -36,13 +36,13 @@ public class MeleeWeapon : MonoBehaviour
     }
     public void FixedUpdate()
     {
-      //  Debug.Log(Attacking);
-        if (!Attacking) { Debug.Log("111"); return; }
-     //   if (_attacking) { Debug.Log("111"); return; }
+      
+        if (!Attacking) {  return; }
+    
         int hitCount = _capsuleCaster.Cast(_hitResults);
-        //  Debug.Log(hitCount);
+        
         if (hitCount <= 0) {  return; }
-    //    _attacking = false;
+   
         for(int i = 0; i < hitCount; i++)
         {
             Transform target = _hitResults[i].transform;
@@ -52,9 +52,10 @@ public class MeleeWeapon : MonoBehaviour
             }
             if (_hitCache.Contains(target)) continue;
             if(target.TryGetComponent(out Character character))
+         //     if(target.TryGetComponent(out IHittable hittable))
             {
-           //     Debug.Log("1111");
-                character.TweakHealth(-damage);
+              //  hittable.OnHit(damage);
+                character.OnHit(damage);
             }
             _hitCache.Add(target);
         }

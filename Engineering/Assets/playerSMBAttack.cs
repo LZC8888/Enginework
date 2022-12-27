@@ -8,7 +8,7 @@ public class playerSMBAttack : StateMachineBehaviour
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         animator.gameObject.GetComponent<Character>().OnMeleeAttackStart();
-        Debug.Log("enter");
+     //   Debug.Log("enter");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -22,7 +22,7 @@ public class playerSMBAttack : StateMachineBehaviour
     {
         animator.ResetTrigger("Attack");
         animator.gameObject.GetComponent<Character>().OnMeleeAttackEnd();
-        Debug.Log("exit");
+     //   Debug.Log("exit");
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

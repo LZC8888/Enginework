@@ -10,10 +10,10 @@ public class TransformConstrain : MonoBehaviour
         transform.position = target.position;
         transform.rotation = target.rotation;
     }
-   /* public void OnDrawGizmos()
+    public void OnDrawGizmos()
     {
         FixedUpdate();
-    }*/
+    }
     // Start is called before the first frame update
     void Start()
     {

@@ -58,20 +58,27 @@
   <ItemGroup>
     <Compile Include="Assets\Script\PlayerScanner.cs" />
     <Compile Include="Assets\Script\Heroine.cs" />
+    <Compile Include="Assets\Script\HitTag.cs" />
     <Compile Include="Assets\Script\EnemyController.cs" />
     <Compile Include="Assets\Script\BanditBehaviour.cs" />
     <Compile Include="Assets\Cartoon Heroes\Scripts\SetCharacter\SetCharacter.cs" />
     <Compile Include="Assets\Script\PlayerInput.cs" />
+    <Compile Include="Assets\Script\CapsuleCaster.cs" />
     <Compile Include="Assets\Script\CameraControl.cs" />
     <Compile Include="Assets\Script\playerControl.cs" />
-    <Compile Include="Assets\BanditSMBAttack.cs" />
-    <Compile Include="Assets\Script\Follow_camera.cs" />
-    <Compile Include="Assets\Script\Character.cs" />
     <Compile Include="Assets\Script\TransformConstrain.cs" />
-    <Compile Include="Assets\Script\CapsuleCaster.cs" />
-    <Compile Include="Assets\Script\MeleeWeapon.cs" />
-    <Compile Include="Assets\Script\HitTag.cs" />
+    <Compile Include="Assets\BanditSMBAttack.cs" />
+    <Compile Include="Assets\Script\Character.cs" />
     <Compile Include="Assets\playerSMBAttack.cs" />
+    <Compile Include="Assets\Script\MeleeWeapon.cs" />
+    <Compile Include="Assets\Script\Follow_camera.cs" />
+    <Compile Include="Assets\Script\IHittable.cs" />
+    <Compile Include="Assets\Script\CollidersHandler.cs" />
+    <Compile Include="Assets\Script\JsonExtension.cs" />
+    <Compile Include="Assets\Script\QuestManager.cs" />
+    <Compile Include="Assets\Script\QuestHost.cs" />
+    <Compile Include="Assets\Script\MessageCenter.cs" />
+    <Compile Include="Assets\Script\CharacterQuestHolder.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
