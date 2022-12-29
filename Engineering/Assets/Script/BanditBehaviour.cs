@@ -29,15 +29,15 @@ public class BanditBehaviour : MonoBehaviour
         m_Animator = GetComponent<Animator>();
        
         m_OriginPosition = transform.position;//获取初始状态的位置坐标
-      //  Debug.Log(m_OriginPosition);
+      
         m_OriginRotation = transform.rotation;//获取初始状态的旋转坐标
-      //  Debug.Log(m_OriginRotation);
+      
         
     }
     // Update is called once per frame
     void Update()
     {
-        
+
         var target = playerScanner.Detect(transform);
         if (m_Target == null)//第一次初始化
         {
@@ -46,14 +46,10 @@ public class BanditBehaviour : MonoBehaviour
         else
         {
             Vector3 toTarget = m_Target.transform.position - transform.position;
-            if(toTarget.magnitude<=attackDistance)//距离小于攻击距离就开始攻击
+            if (toTarget.magnitude <= attackDistance)//距离小于攻击距离就开始攻击
             {
-                m_EnemyController.StopFollowTarget(); 
-          
+                m_EnemyController.StopFollowTarget();
                 m_Animator.SetTrigger(m_HashAttack);
-            
-                
-              
             }
 
             else//继续追踪
@@ -61,48 +57,41 @@ public class BanditBehaviour : MonoBehaviour
                 m_Animator.SetBool(m_HashInPursuit, true);
                 m_EnemyController.FollowTarget(m_Target.transform.position);
             }
-
-           
-            
-            if (target==null)//找不到目标
+            if (target == null)//找不到目标
             {
-              
                 m_TimeSinceLostTarget += Time.deltaTime;//记录丢失目标时长
-                if(m_TimeSinceLostTarget>=timeToStopPursuit)//失去目标时间大于指定时长
+                if (m_TimeSinceLostTarget >= timeToStopPursuit)//失去目标时间大于指定时长
                 {
                     m_Target = null;
                     m_Animator.SetBool(m_HashInPursuit, false);
                     StartCoroutine(WaitOnPursuit());
-             //       Debug.Log("Stopping the enemy");
                 }
             }
             else
             {
-           //     Debug.Log("Continuing the enemy");
                 m_TimeSinceLostTarget = 0;
             }
-            
         }
-        Vector3 toBase = m_OriginPosition- transform.position;
+        Vector3 toBase = m_OriginPosition - transform.position;
         toBase.y = 0;
         bool bNearBase = toBase.magnitude < 1f;//基地附近
         m_Animator.SetBool(m_HashNearBase, bNearBase);
-        if(bNearBase)
+        if (bNearBase)
         {
             Quaternion targetRotation = Quaternion.RotateTowards
                 (transform.rotation, m_OriginRotation, 360 * Time.deltaTime);
             transform.rotation = targetRotation;
-
-         //   Debug.Log("I will arrive");
         }
-        
     }
     private IEnumerator WaitOnPursuit()
     {
         yield return new WaitForSeconds(timeToWaitOnPursuit);
         Debug.Log("I will return");
         m_EnemyController.FollowTarget(m_OriginPosition);
-
+    }
+    public void Death()
+    {
+        Destroy(this);
     }
 #if UNITY_EDITOR
     private void OnDrawGizmosSelected()

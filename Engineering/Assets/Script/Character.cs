@@ -68,20 +68,24 @@ public class Character : MonoBehaviour
 
         if (!enduring) { Debug.Log("111"); Animator.SetTrigger(HurtState); }
         status.TWeakHealth(-damage);
+       
         OnHurt?.Invoke();
 
         if (Dead)
         {
-         //   Debug.Log("1");
+            if(TryGetComponent(out BanditBehaviour ememy))
+            {
+                ememy.Death();
+            }
             Animator.StopPlayback();
             Animator.SetBool(DeadState, true);
             
             OnDead?.Invoke();
             MessageCenter.OnCharacterDead?.Invoke(this);
-         //   Animator.SetBool(DeadState, false);
+         
             if (ragdollOnDead)
             {
-            //    Debug.Log("Dead");
+            
                 Collider.enabled = false;
                 Animator.enabled = false;
                 ragdollcolliders.Enable(true);

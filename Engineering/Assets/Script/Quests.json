@@ -4,14 +4,14 @@
         "title": "Defeat Small Bandit!",
         "description": "Defeat Samll bandit located south of the camp.",
         "exp": 50,
-        "targetGuid": "254ebd2d-7436-4265-a194-f213607db8ab"
+        "targetGuid": "2b45e0fe-b400-4606-8ecb-07db117d644e"
     },
     {
         "questType" : "CharacterSlayingQuest",
         "title": "Defeat Medium Bandit!",
         "description": "Defeat Medium bandit located south of the camp.",
         "exp": 100,
-        "targetGuid": "2d8c382a-ea4f-44b1-b482-80193b03ae48"
+        "targetGuid": "5c5c0211-5942-47f6-a0f0-6c2842dcbb00"
     },
     {
         "questType" : "CharacterSlayingQuest",

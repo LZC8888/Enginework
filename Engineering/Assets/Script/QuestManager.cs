@@ -67,6 +67,10 @@ public interface IQuestHolder
 {
     List<AQuest> Quests { get; }
 }
+public interface IQuestHost : IQuestHolder
+{
+    Action OnQuestAssigned { get; set; }
+}
 public interface IQuestAccepter : IQuestHolder
 {
     void OnAcceptQuest(AAsignableQuest quest);    
@@ -118,15 +122,23 @@ public class CharacterSlayingQuest : AAsignableQuest {
         {
             MessageCenter.OnCharacterDead -= CheckIsFinished;
             onFinished?.Invoke(exp);
+            onFinished = null;
         }
     }
 }
 public static class IQuestExtension
 {
-    public static void Assign(this IQuestHolder from,AAsignableQuest quest,IQuestAccepter to)
+    public static void Send(this IQuestHolder from,AQuest quest,IQuestHolder to)
     {
         from.Quests.Remove(quest);
         to.Quests.Add(quest);
+        
+    }
+    public static void Assign(this IQuestHost from, AAsignableQuest quest, IQuestAccepter to)
+    {
+        from.Send(quest, to);
+        from.OnQuestAssigned?.Invoke();
+        
         to.OnAcceptQuest(quest);
         quest.StartQuest();
     }

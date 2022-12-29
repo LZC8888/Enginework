@@ -14,6 +14,7 @@ public class CharacterQuestHolder : MonoBehaviour,IQuestAccepter
     }
     public void OnAcceptQuest(AAsignableQuest quest)
     {
+       // Debug.Log("1");
         quest.onFinished += _status.TWeakExp;
     }
     // Update is called once per frame
