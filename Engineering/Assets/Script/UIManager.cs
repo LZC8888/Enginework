@@ -12,10 +12,11 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance { get; private set; }
 
     public QuestPanel questPanel;
+    public BackpackPanel backpackPanel;
 
     private void Awake()
     {
-        Assert.IsNull(Instance);
+     //   Assert.IsNull(Instance);
         Instance = this;
     }
 }
@@ -27,6 +28,7 @@ public abstract class AWindow : MonoBehaviour
 
     protected virtual void Awake()
     {
+        gameObject.SetActive(true);
         TryGetComponent(out CanvasGroup);
         Assert.IsNotNull(CanvasGroup);
 

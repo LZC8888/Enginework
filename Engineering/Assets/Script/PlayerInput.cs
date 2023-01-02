@@ -6,6 +6,11 @@ public class PlayerInput : MonoBehaviour
 {
     private Vector3 m_Movement;
     private bool m_bIsAttack;
+    private Character playerCharacter;
+    private void Awake()
+    {
+        playerCharacter = GetComponent<Character>();
+    }
     public Vector3 MoveInput
     {
         get
@@ -41,6 +46,10 @@ public class PlayerInput : MonoBehaviour
         {
             Debug.Log("Fire1 is readly");
             StartCoroutine(AttackAndWait());
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            playerCharacter.Interact();
         }
     }
     private IEnumerator AttackAndWait()

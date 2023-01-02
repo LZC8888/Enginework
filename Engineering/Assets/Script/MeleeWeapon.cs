@@ -1,8 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+public interface IWeaponBonusing
+{
+    int DamageBonus { get; }
+}
 [RequireComponent(typeof(CapsuleCaster))]
-public class MeleeWeapon : MonoBehaviour
+public class MeleeWeapon : MonoBehaviour,IPackedItem
 {
     public const int MaxHitcount = 10;
 
@@ -13,6 +18,7 @@ public class MeleeWeapon : MonoBehaviour
     private RaycastHit[] _hitResults = new RaycastHit[MaxHitcount];
     public List<Transform> _hitCache = new List<Transform>();
     private CapsuleCaster _capsuleCaster;
+    private IWeaponBonusing _bonus;
     private bool _attacking;
     
 
@@ -29,6 +35,8 @@ public class MeleeWeapon : MonoBehaviour
             _attacking = value;
         }
     }
+    public void SetDamageBonus(IWeaponBonusing bonus) => _bonus = bonus;
+    public void ResetDamageBonus() => _bonus = null;
     public void Awake()
     {
           TryGetComponent(out _capsuleCaster);
@@ -51,23 +59,20 @@ public class MeleeWeapon : MonoBehaviour
                 if ((hitTags & tag.type) == 0) continue;
             }
             if (_hitCache.Contains(target)) continue;
-            if(target.TryGetComponent(out Character character))
-         //     if(target.TryGetComponent(out IHittable hittable))
+       //     if(target.TryGetComponent(out Character character))
+              if(target.TryGetComponent(out IHittable hittable))
             {
-              //  hittable.OnHit(damage);
-                character.OnHit(damage);
+                  hittable.OnHit(damage);
+                int bonus = 0;
+                if (_bonus != null) bonus = _bonus.DamageBonus;
+                hittable.OnHit(damage+bonus);
             }
             _hitCache.Add(target);
         }
     }
-    // Start is called before the first frame update
-    void Start()
+   void IPackedItem.OnUseFromBackPack(Backpack backpack,Character target)
     {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        backpack.TakeOut(this);
+        target.Grab(this);
     }
 }

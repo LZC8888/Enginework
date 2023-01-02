@@ -15,7 +15,7 @@ E:/工程实践作业/Git/Enginework/Engineering
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-29515
+1362
 Successfully changed project path to: E:/工程实践作业/Git/Enginework/Engineering
 E:/工程实践作业/Git/Enginework/Engineering
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -47,12 +47,12 @@ E:/工程实践作业/Git/Enginework/Engineering
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [21844] Host "[IP] 192.168.136.1 [Port] 0 [Flags] 2 [Guid] 2750820470 [EditorId] 2750820470 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1NBQBKQJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [28380] Host "[IP] 192.168.136.1 [Port] 0 [Flags] 2 [Guid] 2317773528 [EditorId] 2317773528 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1NBQBKQJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [21844] Host "[IP] 192.168.136.1 [Port] 0 [Flags] 2 [Guid] 2750820470 [EditorId] 2750820470 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1NBQBKQJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28380] Host "[IP] 192.168.136.1 [Port] 0 [Flags] 2 [Guid] 2317773528 [EditorId] 2317773528 [Version] 1048832 [Id] WindowsEditor(7,LAPTOP-1NBQBKQJ) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 AS: AutoStreaming module initializing.
-Refreshing native plugins compatible for Editor in 38.03 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 84.49 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.15f1c1 (080beb55ecda)
 [Subsystems] Discovering subsystems at path E:/unity/2021.3.15f1c1/Editor/Data/Resources/UnitySubsystems
@@ -68,74 +68,74 @@ Initialize mono
 Mono path[0] = 'E:/unity/2021.3.15f1c1/Editor/Data/Managed'
 Mono path[1] = 'E:/unity/2021.3.15f1c1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'E:/unity/2021.3.15f1c1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56504
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56548
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: E:/unity/2021.3.15f1c1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.004640 seconds.
+Registered in 0.006628 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 35.95 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 34.20 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.765 seconds
+- Completed reload, in  0.749 seconds
 Domain Reload Profiling:
-	ReloadAssembly (765ms)
-		BeginReloadAssembly (122ms)
+	ReloadAssembly (750ms)
+		BeginReloadAssembly (135ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (482ms)
-			LoadAssemblies (112ms)
+		EndReloadAssembly (457ms)
+			LoadAssemblies (127ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (111ms)
+			SetupTypeCache (114ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (52ms)
-			SetupLoadedEditorAssemblies (241ms)
+			RebuildScriptCaches (35ms)
+			SetupLoadedEditorAssemblies (235ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (14ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (36ms)
-				BeforeProcessingInitializeOnLoad (1ms)
-				ProcessInitializeOnLoadAttributes (129ms)
-				ProcessInitializeOnLoadMethodAttributes (61ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (34ms)
+				BeforeProcessingInitializeOnLoad (2ms)
+				ProcessInitializeOnLoadAttributes (131ms)
+				ProcessInitializeOnLoadMethodAttributes (59ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.013079 seconds.
+Registered in 0.011782 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.56 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.284 seconds
+- Completed reload, in  1.355 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1285ms)
-		BeginReloadAssembly (156ms)
+	ReloadAssembly (1356ms)
+		BeginReloadAssembly (148ms)
 			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (6ms)
+			DisableScriptedObjects (7ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (21ms)
-		EndReloadAssembly (985ms)
-			LoadAssemblies (124ms)
+		EndReloadAssembly (1055ms)
+			LoadAssemblies (119ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (190ms)
+			SetupTypeCache (197ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (50ms)
-			SetupLoadedEditorAssemblies (589ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (641ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (6ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (73ms)
-				ProcessInitializeOnLoadAttributes (455ms)
-				ProcessInitializeOnLoadMethodAttributes (29ms)
-				AfterProcessingInitializeOnLoad (26ms)
+				InitializePlatformSupportModulesInManaged (7ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (87ms)
+				ProcessInitializeOnLoadAttributes (494ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (21ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (13ms)
@@ -143,12 +143,12 @@ Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 0.41 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.42 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1844 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (129.4 KB). Loaded Objects now: 2311.
-Memory consumption went from 82.4 MB to 82.3 MB.
-Total: 3.230100 ms (FindLiveObjects: 0.185600 ms CreateObjectMapping: 0.043600 ms MarkObjects: 2.884200 ms  DeleteObjects: 0.114900 ms)
+Unloading 1893 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (129.5 KB). Loaded Objects now: 2374.
+Memory consumption went from 98.6 MB to 98.5 MB.
+Total: 3.537800 ms (FindLiveObjects: 0.237300 ms CreateObjectMapping: 0.083700 ms MarkObjects: 3.098800 ms  DeleteObjects: 0.116600 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -164,101 +164,46 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.011181 seconds.
+Registered in 0.013029 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.40 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.291 seconds
+- Completed reload, in  1.407 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1291ms)
-		BeginReloadAssembly (205ms)
-			ExecutionOrderSort (0ms)
-			DisableScriptedObjects (5ms)
-			BackupInstance (0ms)
-			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (46ms)
-		EndReloadAssembly (954ms)
-			LoadAssemblies (150ms)
-			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (182ms)
-			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (44ms)
-			SetupLoadedEditorAssemblies (555ms)
-				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (15ms)
-				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (0ms)
-				BeforeProcessingInitializeOnLoad (66ms)
-				ProcessInitializeOnLoadAttributes (421ms)
-				ProcessInitializeOnLoadMethodAttributes (26ms)
-				AfterProcessingInitializeOnLoad (25ms)
-				EditorAssembliesLoaded (0ms)
-			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 2.42 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1838 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 13 unused Assets / (95.3 KB). Loaded Objects now: 2326.
-Memory consumption went from 82.2 MB to 82.1 MB.
-Total: 3.190800 ms (FindLiveObjects: 0.146200 ms CreateObjectMapping: 0.040000 ms MarkObjects: 2.957300 ms  DeleteObjects: 0.046000 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.014710 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.394 seconds
-Domain Reload Profiling:
-	ReloadAssembly (1395ms)
-		BeginReloadAssembly (206ms)
+	ReloadAssembly (1408ms)
+		BeginReloadAssembly (215ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (6ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (36ms)
-		EndReloadAssembly (1048ms)
-			LoadAssemblies (166ms)
+			CreateAndSetChildDomain (46ms)
+		EndReloadAssembly (1050ms)
+			LoadAssemblies (158ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (205ms)
+			SetupTypeCache (182ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (60ms)
-			SetupLoadedEditorAssemblies (586ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (635ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (17ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (14ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (71ms)
-				ProcessInitializeOnLoadAttributes (439ms)
-				ProcessInitializeOnLoadMethodAttributes (30ms)
-				AfterProcessingInitializeOnLoad (28ms)
-				EditorAssembliesLoaded (1ms)
+				BeforeProcessingInitializeOnLoad (70ms)
+				ProcessInitializeOnLoadAttributes (490ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (30ms)
+				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (16ms)
+			AwakeInstancesAfterBackupRestoration (18ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 3.52 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 3.88 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1838 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 13 unused Assets / (95.3 KB). Loaded Objects now: 2341.
-Memory consumption went from 82.2 MB to 82.1 MB.
-Total: 3.533600 ms (FindLiveObjects: 0.257600 ms CreateObjectMapping: 0.040700 ms MarkObjects: 3.187800 ms  DeleteObjects: 0.045600 ms)
+Unloading 1874 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 13 unused Assets / (95.3 KB). Loaded Objects now: 2389.
+Memory consumption went from 96.9 MB to 96.8 MB.
+Total: 3.690200 ms (FindLiveObjects: 0.170700 ms CreateObjectMapping: 0.042700 ms MarkObjects: 3.388200 ms  DeleteObjects: 0.087300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -273,166 +218,34 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 103630.687620 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Legs/Legs_1/Materials/Female_Base_Legs.mat
-  artifactKey: Guid(12a3f199e1082df408484795add5ab5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Legs/Legs_1/Materials/Female_Base_Legs.mat using Guid(12a3f199e1082df408484795add5ab5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01f5d265f2be52c8634103518edbfd39') in 0.429662 seconds 
+  Time since last request: 448923.338740 seconds.
+  path: Assets/Cartoon Heroes/Female/3D/Hairs/Hair_4/Female_Hair_4.FBX
+  artifactKey: Guid(7e462abb283b73a4ba97438461785130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cartoon Heroes/Female/3D/Hairs/Hair_4/Female_Hair_4.FBX using Guid(7e462abb283b73a4ba97438461785130) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d9fdcc3fa856d5d9fa673cdc45dd0d6') in 0.397137 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 36.645586 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1_Blond.mat
-  artifactKey: Guid(2288758dcfc2a1f49bbddb9a8bfa5c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Hairs/Hair_1/Materials/Female_Hair_1_Blond.mat using Guid(2288758dcfc2a1f49bbddb9a8bfa5c85) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7612f9bd02e410fd2f3fa91740eeb8d') in 0.033982 seconds 
+  Time since last request: 225.477959 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Outline.mat
+  artifactKey: Guid(a00013af81304728b2be1f4309ee2433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Outline.mat using Guid(a00013af81304728b2be1f4309ee2433) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15f25d9dc7d26d270f426eb4677e2334') in 0.120780 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.453163 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Heads/Head 1/Materials/Female_Head_1.mat
-  artifactKey: Guid(09440252667b4c342a784b9f0a6feef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Heads/Head 1/Materials/Female_Head_1.mat using Guid(09440252667b4c342a784b9f0a6feef6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53785f3bb79126af056e76202e6e61f8') in 0.027373 seconds 
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Outline.mat
+  artifactKey: Guid(f629c6e43dba4bf38cb74d8860150664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF - Outline.mat using Guid(f629c6e43dba4bf38cb74d8860150664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ea5515916332d291c91c7c688251897') in 0.014101 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.637526 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Light.mat
-  artifactKey: Guid(350a99ec045aeee4fa6fa4bbe322891a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Legs/Legs_1/Materials/Female_Legs_1_Skin_Light.mat using Guid(350a99ec045aeee4fa6fa4bbe322891a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc629b1236ea06cbddd18364097aa0b7') in 0.024953 seconds 
+  Time since last request: 0.000038 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny Days.mat
+  artifactKey: Guid(6522f30e342599e4e9dd4cc2cc03c830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Anton SDF - Sunny Days.mat using Guid(6522f30e342599e4e9dd4cc2cc03c830) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a3131bea0aa58ff8d6cabe49f529ad8') in 0.119808 seconds 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Legs/Legs_2/Materials/Female_Legs_2_Black.mat
-  artifactKey: Guid(49d03cf711496d8419fb8ac3845b77df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Legs/Legs_2/Materials/Female_Legs_2_Black.mat using Guid(49d03cf711496d8419fb8ac3845b77df) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '353d645bce4ddc4962d431560ad74460') in 0.027290 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.048299 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin_Light.mat
-  artifactKey: Guid(1bd40f27ff5070a40b4b0c304b6f8d03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Legs/Legs_3/Materials/Female_Legs_3_Skin_Light.mat using Guid(1bd40f27ff5070a40b4b0c304b6f8d03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '893181ac6bc7b74dfb1a11c1fc7f32d9') in 0.031881 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.256515 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Red.mat
-  artifactKey: Guid(4ba498ce1f827be4f8ee1ff7f788e38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Torsos/Torso_1/Materials/Female_Torso_1_Red.mat using Guid(4ba498ce1f827be4f8ee1ff7f788e38e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27c249ff6b292600cc49d361818e2b0a') in 0.028599 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.739982 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin.mat
-  artifactKey: Guid(d5617c5bbd0c5b84d817bd31a677be99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Torsos/Torso_2/Materials/Female_Torso_2_Skin.mat using Guid(d5617c5bbd0c5b84d817bd31a677be99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a2b7a75e6fc446c6f7e1c50b6f924af') in 0.021033 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.932081 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Blue.mat
-  artifactKey: Guid(99be721522d8cd244a5d60f0d28d2d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Blue.mat using Guid(99be721522d8cd244a5d60f0d28d2d3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cef5087b161a2fdadc58ddb4d440d3a9') in 0.034671 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.013052 seconds.
-  path: Assets/Cartoon Heroes/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Green.mat
-  artifactKey: Guid(cb18b88ddbcf5f348842c185ceb496bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Female/3D/Torsos/Torso_3/Materials/Female_Torso_3_Green.mat using Guid(cb18b88ddbcf5f348842c185ceb496bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '232752c26052dad0430ed95748d49a9c') in 0.041708 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.099593 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso.mat
-  artifactKey: Guid(dad6ecf4df825004897244446133fa7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso.mat using Guid(dad6ecf4df825004897244446133fa7d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89884705b2222a77882de2350f9f9df5') in 0.037775 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso_Dark.mat
-  artifactKey: Guid(ed4301b3acf796f44891aaa0439ac07e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Base Torso/Materials/Male_Base_Torso_Dark.mat using Guid(ed4301b3acf796f44891aaa0439ac07e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1cedfd13786206789f36a9f540d040ec') in 0.027464 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1_Blond.mat
-  artifactKey: Guid(4d95781dcd39c66428a7fae43b646325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Hairs/Hair_1/Materials/Male_Hair_1_Blond.mat using Guid(4d95781dcd39c66428a7fae43b646325) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1173241012360c13f507008bd6bb14b4') in 0.024614 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3.mat
-  artifactKey: Guid(2df24410c0acf71478ccaedd025142ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Hairs/Hair_3/Materials/Male_Hair_3.mat using Guid(2df24410c0acf71478ccaedd025142ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3ac1156709c1bd154d2dba134d050b7b') in 0.023238 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.010576 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Hairs/Hair_4/Materials/Male_Hair_4.mat
-  artifactKey: Guid(c721ecac46d6f11499c1291b2761d121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Hairs/Hair_4/Materials/Male_Hair_4.mat using Guid(c721ecac46d6f11499c1291b2761d121) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9ac458d74ed0ef0f5a230507b874cb09') in 0.038760 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Heads/Head_1/Materials/Male_Head_1.mat
-  artifactKey: Guid(25e381a33d04932429a8bd13baaefaee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Heads/Head_1/Materials/Male_Head_1.mat using Guid(25e381a33d04932429a8bd13baaefaee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb1be0bc9d587cc3b969c8391c5201de') in 0.026216 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000057 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Legs/Legs_2/Materials/Male_Legs_2_Black.mat
-  artifactKey: Guid(959ddde271455ab4c975f33ed1927d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Legs/Legs_2/Materials/Male_Legs_2_Black.mat using Guid(959ddde271455ab4c975f33ed1927d44) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '165579777c3599d199634a0483bdb030') in 0.021114 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.066782 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Red.mat
-  artifactKey: Guid(39d2188cf8e2a22439f65bce096b068f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Red.mat using Guid(39d2188cf8e2a22439f65bce096b068f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3b9552f2d884b287b386a6b6bef7c30b') in 0.027121 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.021051 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Yellow.mat
-  artifactKey: Guid(b144a4a4d26c47b4485eba56fb574713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Torso_1/Materials/Male_Torso_1_Yellow.mat using Guid(b144a4a4d26c47b4485eba56fb574713) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7406984da1dcdda9cbf4f6ede055101b') in 0.021835 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Blue.mat
-  artifactKey: Guid(82e49f9e37249c74392c3fb56ce726fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Blue.mat using Guid(82e49f9e37249c74392c3fb56ce726fa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '849d4b2a5d13a3d2f62a26c257a65297') in 0.022051 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.003613 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Yellow.mat
-  artifactKey: Guid(6211994c0576b7241a869fd7fc0d206d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Torso_2/Materials/Male_Torso_2_Yellow.mat using Guid(6211994c0576b7241a869fd7fc0d206d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1ba02ce6a23c034a072597369581f01') in 0.018552 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Yellow.mat
-  artifactKey: Guid(2d0031d3e1ffcaa4ba3deede89fca2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Yellow.mat using Guid(2d0031d3e1ffcaa4ba3deede89fca2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '604cdbac0c21c1932f9398e15738267e') in 0.016583 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Cartoon Heroes/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin_Dark.mat
-  artifactKey: Guid(e5aa232d9b500f94b8045befbcdfc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Male/3D/Torsos/Torso_3/Materials/Male_Torso_3_Skin_Dark.mat using Guid(e5aa232d9b500f94b8045befbcdfc609) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '203ff28eae6d49a1f7f91e821f5d25bf') in 0.018928 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Cartoon Heroes/Weapons/Sword_2/3D/Materials/Sword_2.mat
-  artifactKey: Guid(498d31441de95ab4da6ec9ed397bb26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Weapons/Sword_2/3D/Materials/Sword_2.mat using Guid(498d31441de95ab4da6ec9ed397bb26e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0974cf433d3e38c916b905ebbac7b23') in 0.013772 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Cartoon Heroes/Weapons/Sword_1/3D/Materials/Sword_1_Yellow.mat
-  artifactKey: Guid(d23d933a5bb042546bab11d145ca9a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Weapons/Sword_1/3D/Materials/Sword_1_Yellow.mat using Guid(d23d933a5bb042546bab11d145ca9a20) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2dadd3c065a374435f516ee39dd06c5') in 0.020530 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/Cartoon Heroes/Weapons/Sword_3/3D/Materials/Sword_3_Gray.mat
-  artifactKey: Guid(5fea74ce992612b4e97c431f78002d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Weapons/Sword_3/3D/Materials/Sword_3_Gray.mat using Guid(5fea74ce992612b4e97c431f78002d2d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '357cb99c9159847c550f515a1e42b050') in 0.027632 seconds 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Cartoon Heroes/Weapons/Sword_4/3D/Materials/Sword_4_Yellow.mat
-  artifactKey: Guid(f2013b95037b0aa48a3170f71df13812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Cartoon Heroes/Weapons/Sword_4/3D/Materials/Sword_4_Yellow.mat using Guid(f2013b95037b0aa48a3170f71df13812) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9c0d207737b77693b1827a3bcab526e2') in 0.026545 seconds 
+  Time since last request: 0.846534 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat
+  artifactKey: Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Resources/Fonts & Materials/Bangers SDF Logo.mat using Guid(f4e195ac1e204eff960149d1cb34e18c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64cf6650f81dac692b0c8d591a7b189b') in 0.252817 seconds 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
 Process exiting

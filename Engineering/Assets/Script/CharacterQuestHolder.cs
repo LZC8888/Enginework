@@ -10,12 +10,12 @@ public class CharacterQuestHolder : MonoBehaviour,IQuestAccepter
     // Start is called before the first frame update
     private void Start()
     {
-        if (TryGetComponent(out Character character)) _status = character.status;
+        if (TryGetComponent(out Character character)) _status = character.Status;
     }
     public void OnAcceptQuest(AAsignableQuest quest)
     {
        // Debug.Log("1");
-        quest.onFinished += _status.TWeakExp;
+        quest.onFinished += _status.TweakExp;
     }
     // Update is called once per frame
     void Update()
